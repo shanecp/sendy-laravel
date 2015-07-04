@@ -1,18 +1,22 @@
-# sendy-laravel
-A service provider for Sendy API in Laravel 5
+# Sendy Package for Laravel 4
+A service provider for Sendy API in Laravel 4.
+
+(For Laravel 5, use the [original package](https://github.com/hocza/sendy-laravel))
 
 Installation
 ---
-```shell
-composer require hocza/sendy:dev-master
-```
-
-or append your composer.json with:
+Update your composer.json with:
 
 ```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/shanecp/sendy-laravel"
+    }
+],
 "require": {
-		"hocza/sendy": "dev-master"
-	},
+        "hocza/sendy": "dev-laravel4"
+    },
 ```
 Add the following settings to the config/app.php
 
@@ -37,10 +41,10 @@ For the `Sendy::` facade
 Configuration
 ---
 ```shell
-php artisan vendor:publish --provider="Hocza\Sendy\SendyServiceProvider"
+php artisan config:publish --path="vendor/hocza/sendy/config/" hocza/sendy
 ```
 
-It will create sendy.php within the config directory.
+It will create sendy.php within the `config\hocza\sendy` directory.
 
 ```php
 <?php
