@@ -19,9 +19,9 @@ class SendyServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->publishes([
-            __DIR__ . '/../config/sendy.php' => config_path('sendy.php')
-        ]);
+		// $this->publishes([
+  //           __DIR__ . '/../config/sendy.php' => config_path('sendy.php')
+  //       ]);
 	}
 
 	/**
