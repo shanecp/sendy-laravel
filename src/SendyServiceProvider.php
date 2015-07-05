@@ -19,7 +19,7 @@ class SendyServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('hocza/sendy');	
+		$this->package('hocza/sendy', 'sendy', __DIR__.'/../');
 	}
 
 	/**
